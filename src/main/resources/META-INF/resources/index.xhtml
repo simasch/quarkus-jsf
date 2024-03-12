@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html">
+    <h:head>
+        <title>Hello</title>
+        <style>
+            body .ui-growl {
+                top: 0;
+            }
+        </style>
+    </h:head>
+
+    <h:body>
+        <p:growl id="message" showDetail="true"/>
+
+        <p:card style="width: 25em">
+            <h:form>
+                <p:panelGrid columns="2" style="width: 10em">
+                    <h:outputText value="Name"/>
+                    <p:inputText value="#{helloBean.name}"/>
+                    <p:commandButton value="Greet" action="#{helloBean.greet()}" update="message"/>
+                </p:panelGrid>
+            </h:form>
+        </p:card>
+    </h:body>
+</f:view>
+</html>
