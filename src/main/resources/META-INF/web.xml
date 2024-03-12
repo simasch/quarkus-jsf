@@ -10,6 +10,10 @@
     </welcome-file-list>
 
     <context-param>
+        <param-name>jakarta.faces.AUTOMATIC_EXTENSIONLESS_MAPPING</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
         <param-name>jakarta.faces.INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL</param-name>
         <param-value>true</param-value>
     </context-param>
@@ -17,14 +21,4 @@
         <param-name>primefaces.THEME</param-name>
         <param-value>saga</param-value>
     </context-param>
-
-    <servlet>
-        <servlet-name>Faces Servlet</servlet-name>
-        <servlet-class>jakarta.faces.webapp.FacesServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>Faces Servlet</servlet-name>
-        <url-pattern>*.xhtml</url-pattern>
-    </servlet-mapping>
 </web-app>
